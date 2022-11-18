@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+
+    h1{
+        color:white;
+        opacity: 0.5;
+        font-size:70px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif ;
+        font-style:bold ,italic;
+        padding-right: 10 %;
+        down:20%
+        
+    }
+        body{
+            margin:50px;
+            padding:20px;
+            background-size:100%;
+            background-repeat: no-repeat;
+            font-family: sans-serif;
+            background-image:url({{url_for('static',filename='food1.png')}});
+        }
+        .loginbox{
+            position: absolute;
+            top:60%;
+            right:280px;
+            transform:translate(-50%,-50%);
+            width:350px;
+            height:420px;
+            padding:80px 40px;
+            box-sizing:border-box;
+            background:lightseagreen;
+            color:#fff;
+
+        }
+        h2{
+            margin:0;
+            padding:0 0 15px;
+            color:yellow;
+            font-size:32px;
+            text-align: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .loginbox p{
+            padding:0;
+            margin:0;
+            font-weight: bold;
+            color:#fff;
+        }
+        .loginbox input{
+            width:100%;
+            margin-bottom: 20px;
+            
+        }
+        .loginbox input[type="text"], .loginbox input[type="password"]
+        {
+            border:none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height:40px;
+            color:#fff;
+            font-size:16px;
+        }
+        #sign
+        {
+            border:none;
+            outline: none;
+            height: 30px;
+            color:#fff;
+            font-size: 16px;
+            background: rgb(6, 85, 66);
+            cursor:pointer;
+            border-radius: 20px;
+            position: absolute;
+            top:55%;
+            left:10%;
+            right: 10%;
+            padding:20px 80px;
+            padding-left:70px;
+            margin-top:90px;
+            padding-bottom:30px;
+            box-sizing:border-box;
+
+        }
+        #sign1
+        {
+            
+            color:yellow;
+            font-size: 16px;
+            cursor:pointer;
+            font-size:20px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            position: absolute;
+            padding-left:40px;
+            margin-top:80px;
+            padding:10px 50px;
+            box-sizing:border-box;
+        }
+        
+        a{
+            color: black;
+            text-decoration: none;
+        }
+        .user{
+            width:100px;
+            height: 100px;
+            overflow: hidden;
+            position: absolute;
+            top:calc(-100px/2);
+            left: calc(50% - 50px);
+            border-radius: 50px;
+        }
+        #inp{
+            color:rgb(236, 75, 75);
+        }
+
+      #sign_btn{
+    
+       transition-duration: 0.4s;
+       color:white;
+       }
+
+      #sign_btn:hover {
+        background-color: #4CAF50; /* Green */
+    
+        }
+        
+    </style>
+</head>
+<body>
+    <h1>FOOD <br> DEMAND <br> FORECASTING</h1>
+    <!-- <div class="col">
+        <h3 class="title"></h3>
+        <img src="{{url_for('static', filename='user.png')}}" width="100px" height="100px"/>
+    </div> -->
+<div class="loginbox" >
+    <h2>WELCOME</h2>
+    <form action="/login" method="post">
+        <p>EMAIL</p>
+        <input type="text" id="inp" name="email" placeholder="Enter the email" onclick="checkemail()">
+        <div id="d1"></div>
+        <p>PASSWORD</p>
+        <input type="password" name="password" placeholder="Enter the password">
+        <input type="submit" value=" SIGN IN  " name="sign_btn"></input>
+        <div>
+            <a href="register"> NEW USER ?</a>
+        </div>
+        <br>
+    </form>
+</div>
+</body>
+</html>

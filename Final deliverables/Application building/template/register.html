@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color:sandybrown; 
+            background-image:url({{url_for('static',filename='reg.jpg')}});
+            background-size:100%;   
+        }
+        p{
+            padding-top: 7px;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        .loginbox{
+            position: absolute;
+            top:50%;
+            margin-left: 900px;
+            transform:translate(-50%,-50%);
+            width: 420px;
+            height:500px;
+            padding:80px 40px;
+            box-sizing:border-box;
+            color:#fff;
+            
+            background-color:burlywood;
+            background-size: 90%;
+            border-radius: 30px;
+            
+            font-size: 14px;
+        }
+        .loginbox input[type="text"], .loginbox input[type="password"]
+        {
+            border:none;
+            border-bottom: 1px solid #fff;
+            background: transparent;
+            outline: none;
+            height:30px;
+            color:crimson;
+            font-size:16px;
+            padding-left:10px;
+           
+        }
+        
+        span{
+            font-size: 20px;
+            
+            color:black;
+        }
+        
+        button{
+            width:100px;
+            height: 40px;
+            border-radius: 10px;
+            background-color:rgb(169, 231, 75);
+            color:black;
+            margin-left: 120px;
+            
+            font-weight: bolder;
+            cursor: pointer;
+        }
+        #sp{
+            margin-top:30px;
+            margin-bottom: 30px;
+        }
+        #city{
+            font-size: 15px;
+            padding-top:5px;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="loginbox"  >
+        <form action="/register" method="post">
+            <span>USER NAME: </span>
+            <input type="text" id="inp" name="name" >
+            <span>PASSWORD: </span>
+            <input type="password" name="password" ><br>
+            <span>EMAIL ID : </span>
+            <input type="email" id="inp" name="email" ><br>
+            <span>SHOP ID&nbsp;  : </span>
+            <input type="number" id="inp" name="shopid" ><br>
+            <span>PHONE NO. :</span>
+            <input type="number" id="inp" name="phone" ><br>
+            <span>CITY ID &nbsp; &nbsp;: </span>
+            <input type="number" id="inp" name="cityid" ><br>
+            <p id="city"><a href="cities.html">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                 Refer your city code here..</a></p>
+            <input type="radio"  value="Rural" id="radio" name=""><span id="sp">Urban</span><br>
+            <input type="radio"  value="urban" id="radio" name=""><span id="sp">Rural</span><br>
+            <p><a href="index"> REGISTERED ALREADY ?</a></p>
+            <input type="submit"value="register">
+        </form>
+    </div>
+</body>
+</html>

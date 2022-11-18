@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Manual</title>
+</head>
+<style>
+	*{
+	margin: 0;
+	padding: 0;
+	font-family: arial;
+	box-sizing: border-box;
+}
+body{
+	height: 100vh;
+	display: grid;
+	place-items: center;
+	background: linear-gradient(rgba(0,0,0,0),rgba(0,0,0,0.6));
+    background-image:url({{url_for('static',filename='city.png')}});
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+table{
+	width: 550px;
+    margin-left:600px;
+	box-shadow: -1px 12px 12px -6px rgba(0,0,0,0.5);
+    border-radius: 10px;
+}
+table, td, th{
+	padding: 10px;
+	border: 10px solid lightgray;
+    border-radius: 10px;
+	border-collapse: collapse;
+	text-align: center;
+	cursor: pointer;
+}
+td{
+	font-size: 18px;
+}
+th{
+	background-color: blue;
+	color: white;
+}
+tr:nth-child(odd){
+	background-color: lightblue;
+}
+tr:nth-child(odd):hover{
+	background-color: dodgerblue;
+	color: white;
+	transform: scale(1.5);
+	transition: transform 300ms ease-in;
+}
+
+tr:nth-child(even){
+	background-color:plum;
+}
+
+tr:nth-child(even):hover{
+	background-color:pink;
+	transform: scale(1.5);
+    transition: transform 300ms ease-in;
+}
+a{
+	text-decoration: none;
+	color:black;
+	font-size:19px;
+	border:10px solid yellowgreen;
+	background-color: yellowgreen;
+	border-radius: 10px;
+	font-weight: bolder;
+}
+</style>
+<body>
+
+<table>
+
+	<tr>
+
+		<th>S.No</th>
+		<th>Cities</th>
+		<th>Region Code</th>
+		<th>PIN CODE</th>
+		<th>Centre Type</th>
+	</tr>
+	<tr>
+		<td>1</td>
+		<td>Srirangam</td>
+		<td>77</td>
+		<td>620005</td>
+		<td>Type A</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>Manaparai</td>
+		<td>34</td>
+		<td>621306</td>
+		<td>Type B</td>
+	</tr>
+	<tr>
+		<td>3</td>
+		<td>Thiruverumbur</td>
+		<td>56</td>
+		<td>620011</td>
+        <td>Type B</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>Panjappur</td>
+		<td>71</td>
+		<td>620012</td>
+		<td>Type C</td>
+	</tr>
+	<tr>
+		<td>5</td>
+		<td>Lalgudi</td>
+		<td>85</td>
+		<td>621601</td>
+        <td>Type B</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>Musiri</td>
+		<td>56</td>
+		<td>621211</td>
+		<td>Type B</td>
+	</tr>
+	<tr>
+		<td>7</td>
+		<td>Mannachanallur</td>
+		<td>34</td>
+		<td>639112</td>
+        <td>Type C</td>
+	</tr>
+	<tr>
+		<td>8</td>
+		<td>Kattur</td>
+		<td>77</td>
+		<td>610104</td>
+		<td>Type A</td>
+	</tr>
+	<tr>
+		<td>9</td>
+		<td>Samayapuram</td>
+		<td>56</td>
+		<td>621112</td>
+        <td>Type A</td>
+	</tr>
+	<tr>
+		<td>10</td>
+		<td>Uraiyur</td>
+		<td>34</td>
+		<td>620003</td>
+        <td>Type B</td>
+	</tr>
+    </table>
+	<p><a href="register">Click here to Go back ..</a></p>
+    </body>
+    </html>
+
+
+    

@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+    <title>TO-DO LIST</title>
+
+    <style>
+        body{
+            content:'';
+            position:static;
+            width:100vw;
+            height:100vh;
+            background-image:url({{url_for('static',filename='todo.jpg')}});
+        }
+        header{
+            
+            height:60px;
+            
+        }
+        * {
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: sans-serif;
+            
+        }
+        #head{
+            padding:20px;
+            text-align:center;
+            color: azure;
+            background-color: rgb(14, 15, 15);
+            border-radius:50px ;
+            font-size: 30px;
+            margin-left: 500px;
+            margin-top: 50px;
+            
+        }
+        main{
+            width:500px;
+            height: 500px;
+            border: 5px rgba(19, 17, 19, 0.85) solid;
+            border-radius: 60px;
+            margin:40px auto;
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(17, 141, 207, 0.6);
+        }
+        ul{
+           list-style: none;
+           width:100%; 
+           background-color:rgb(119, 78, 216);
+        }
+        li{
+            padding: 10px;
+            position:relative;
+        }
+        #mytext{
+            height:30px;
+            margin-right: 10px;
+            padding-left: 10px;
+            padding-right: 10px;
+        }
+        form{
+            margin:20px;
+            
+        }
+        #addBtn{
+            background-color:rgb(129, 81, 241);
+            padding:5px;
+        }
+        #addBtn:hover{
+            background-color: rgb(13, 153, 223);
+            cursor:pointer;
+        }
+        .close{
+            position: absolute;
+            top:0;
+            right:0;
+            padding:10px;
+            cursor:pointer;
+         }
+        .close:hover{
+            background-color: rgb(13, 153, 223);
+         }
+        
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        
+    </header>
+    <main>
+        <form>
+            <input type="text" placeholder="Enter the tasks" id="mytext">
+            <span onclick="mylist()" id="addBtn">+</span>
+        </form>
+        <ul id="myul">
+
+            <li>Go to gym</li>
+            <li>Buy Groceries</li>
+        </ul>
+    </main>
+    <script>
+        var list= document.getElementsByTagName('li');
+        for(var i=0;i<list.length;i++){
+            var span=document.createElement("span");
+            span.className="close";
+            var close=document.createTextNode("-");
+            span.appendChild(close);
+            list[i].appendChild(span);
+        }
+
+        var close = document.getElementsByClassName("close");
+        for(i=0;i < close.length;i++){
+            close[i].onclick=function(){
+                var d=this.parentElement;
+                d.style.display="none";
+            }
+        }
+
+        function mylist(){
+            var li = document.createElement("li");
+            var mytxt = document.getElementById("mytext").value;
+            var t=document.createTextNode(mytxt);
+            li.appendChild(t);
+            if(mytxt==""){
+                alert("Input Field is Empty");
+            }
+            else{
+               document.getElementById("myul").appendChild(li);
+            }
+            var list= document.getElementsByTagName('li');
+            for(var i=0;i<list.length;i++){
+                var span=document.createElement("span");
+                span.className="close";
+                var close=document.createTextNode("-");
+                span.appendChild(close);
+                list[i].appendChild(span);
+            }
+            var close = document.getElementsByClassName("close")
+            for(i=0;i<close.length;i++){
+                close[i].onclick=function(){
+                var d=this.parentElement;
+                d.style.display="none";
+            }
+        }
+
+
+    }
+    </script>
+
+
+</body>
+</html>
